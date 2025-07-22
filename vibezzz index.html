@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibezzz S5 | Wireless Headphones</title>
+  <link rel="icon" href="https://copilot.microsoft.com/images/blob/4sh2nfVgRpe755JXceWeD.jpeg" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style> 
+body.dark-mode .contact-social p,
+body.dark-mode footer {
+  color: #fff;
+}
+.social-icons a.email {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 2rem;
+  color: #d93025; /* Gmail Red */
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-icons a.email:hover {
+  transform: scale(1.2);
+  color: #ff6f61; /* Accent on hover */
+}
+.contact-social {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: transparent;
+}
+
+.contact-social h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.contact-social p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #e1306c;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ff6ec7;
+}
+.buy-button {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.buy-button .spark {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: explode 600ms ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes explode {
+  from {
+    transform: scale(1) translate(0,0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5) translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2f2f2;
+      color: #111;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    @keyframes glowCycle {
+      0%   { filter: drop-shadow(0 0 4px red); }
+      25%  { filter: drop-shadow(0 0 4px cyan); }
+      50%  { filter: drop-shadow(0 0 4px blue); }
+      75%  { filter: drop-shadow(0 0 4px lime); }
+      100% { filter: drop-shadow(0 0 4px purple); }
+    }
+
+    .sparkle {
+      animation: glowCycle 5s infinite alternate;
+    }
+
+    @keyframes typeLoop {
+      0%   { width: 0; }
+      50%  { width: 100%; }
+      100% { width: 100%; }
+    }
+
+    .header-container {
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+      z-index: 1000;
+    }
+
+    .header-container img {
+      height: 50px;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typeLoop 2.5s steps(18, end) infinite;
+      width: fit-content;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #111;
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 980px;
+      margin: 6rem auto 3rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .carousel-box {
+      flex: 1 1 50%;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: 2rem;
+    }
+
+    .carousel-image {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 12px;
+      box-shadow: 0 0 14px rgba(255,255,255,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-image:hover {
+      transform: scale(1.06);
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 0.3rem 0.7rem;
+      border-radius: 30px;
+    }
+
+    .arrow-left { left: 12px; }
+    .arrow-right { right: 12px; }
+
+    .info-box {
+      flex: 1 1 50%;
+      padding: 2rem;
+    }
+
+    .info-box h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .features {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .buy-button {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: #333;
+    }
+
+   
+footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    body.dark-mode {
+      background-color: #111;
+      color: #f2f2f2;
+    }
+
+    body.dark-mode .main,
+    body.dark-mode footer {
+      background-color: #1a1a1a;
+    }
+
+    body.dark-mode .tagline {
+      color: #fff;
+    }
+
+    body.dark-mode .buy-button {
+      background-color: #fff;
+      color: #111;
+    }
+
+    body.dark-mode .dark-toggle {
+      background: #fff;
+      color: #111;
+    }
+  </style>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    let index = 0;
+    const images = [
+      "https://copilot.microsoft.com/images/blob/jYMP15cDtCf1FXXBkATGD.jpeg",
+      "https://copilot.microsoft.com/images/blob/RGQBwua1iB4FXzZV9odvB.jpeg",
+      "https://copilot.microsoft.com/images/blob/AUxKYyLaAxJdaWX8438mf.jpeg",
+      "https://copilot.microsoft.com/images/blob/wZy6XdzL4MucnZbrCQCdy.jpeg"
+    ];
+
+    function showImage(i) {
+      const img = document.getElementById("carousel-img");
+      index = (i + images.length) % images.length;
+      img.src = images[index];
+    }
+
+    window.onload = () => showImage(0);
+  </script>
+</head>
+
+<body>
+
+  <div class="dark-toggle" onclick="toggleDarkMode()">🌙 Toggle Mode</div>
+
+  <header>
+    <div class="header-container">
+      <img src="https://copilot.microsoft.com/images/blob/4sh2nfVgRpe755JXceWeD.jpeg" alt="Vibezzz Logo" class="sparkle" />
+      <div class="tagline">Find Your Vibe</div>
+    </div>
+  </header>
+
+  <section class="main">
+    <div class="carousel-box">
+      <button class="arrow arrow-left" onclick="showImage(index - 1)">&#10094;</button>
+      <img id="carousel-img" class="carousel-image" alt=>
+      <button class="arrow arrow-right" onclick="showImage(index + 1)">&#10095;</button>
+    </div>
+
+    <div class="info-box">
+      <h2>Vibezzz S5</h2>
+      <div class="features">
+        🔇 Active Noise Cancellation<br/>
+        🔋 45-Hour Battery Life<br/>
+        ⚡ 0.038s Ultra-Low Latency<br/>
+        📡 Bluetooth 5.4 Connectivity<br/>
+        🎧 Tuned for immersive gaming and soulful music<br/>
+        📦 CE & FCC Certified — Ships Globally
+      </div>
+      <div class="price">$49.99 USD</div>
+      <a class="buy-button" href="your-payment-link" target="_blank">Buy Now</a>
+    </div>
+  </section>
+<section class="contact-social">
+  <h3>Contact Us</h3>
+  <p>For collaborations, support, or questions, reach out via email or follow us on Instagram:</p>
+
+  <div class="social-icons">
+    <a href="mailto:vibezzzofficial2025@gmail.com" class="email" title="Send Email">
+      📧
+    </a>
+    <a href="https://www.instagram.com/vibezzz__official/" target="_blank" title="Follow on Instagram">
+      📷
+    </a>
+  </div>
+</section>
+<footer>
+    &copy; 2025 Vibezzz Audio Tech. All rights reserved.
+  </footer>
+<script>
+  const buyButton = document.querySelector('.buy-button');
+
+  buyButton.addEventListener('mouseenter', () => {
+    for (let i = 0; i < 12; i++) {
+      const spark = document.createElement('span');
+      spark.className = 'spark';
+
+      // Random direction and colors
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = 40 + Math.random() * 20;
+      spark.style.setProperty('--x', `${Math.cos(angle) * distance}px`);
+      spark.style.setProperty('--y', `${Math.sin(angle) * distance}px`);
+
+      const colors = ['red', 'purple', 'green', 'gold', 'cyan', 'orange'];
+      spark.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+      // Position it near center of button
+      spark.style.left = '50%';
+      spark.style.top = '50%';
+      spark.style.transform = 'translate(-50%, -50%)';
+
+      buyButton.appendChild(spark);
+
+      setTimeout(() => spark.remove(), 800);
+    }
+  });
+</script>
+</body>
+</html>
